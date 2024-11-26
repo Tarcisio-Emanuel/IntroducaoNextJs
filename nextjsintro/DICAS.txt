@@ -1,1 +1,3 @@
 https://api.github.com/users/Tarcisio-Emanuel/repos
+
+npx create-next-app@latest

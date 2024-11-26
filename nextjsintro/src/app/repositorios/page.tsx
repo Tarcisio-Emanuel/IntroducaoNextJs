@@ -20,7 +20,7 @@ export default function Repositorios() {
     useEffect(() => {
 
         function getData() {
-            fetch("https://api.github.com/users/Tarcisio-Emanuel/repos")
+            fetch("https://api.github.com/users/Tarcisio-Emanuel/repos", {next: {revalidate: 120}})
                 .then(res => res.json())
                 .then((data: DataProps[]) => { 
                     

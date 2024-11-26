@@ -1,3 +1,4 @@
+import { OwnerRepo } from "@/components/OwnerRepo";
 
 interface DataProps {
   id: number;
@@ -27,14 +28,20 @@ export default async function Home() {
   return (
 
     <main>
-      <h1>HOME</h1>
+      <h1>HOME </h1>
       <span>bemvindo ahome</span>
 
       <h3>Meus Repositorios</h3>
       {data.map( (item) =>  (
         <div key={item.id}>
-
           <strong>Repositorio:::</strong><a href="###">{item.name}</a><br /><br />
+
+<OwnerRepo
+avatar_url={item.owner.avatar_url}
+name={item.owner.login}
+
+/>
+
         </div>
       ))}
 
